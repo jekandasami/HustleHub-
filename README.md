@@ -8,6 +8,7 @@ The intended users of this system include:
 *   **Administrators:** Users responsible for platform oversight (to be implemented in later phases).
 
 ## System Architecture
+
 ```mermaid
 graph TD
     subgraph Client Boundary
@@ -41,7 +42,6 @@ graph TD
     DB --> Logic
     Logic --> API
     API --> HTTPS
-    HTTPS --> UI
+    HTTPS --> UI```
 
-## Architecture Breakdown
-The HustleHub+ backend is built on a MERN stack foundation, utilizing Node.js and Express to deliver a secure API. The architecture is divided into strict boundaries to enforce a separation of concerns:
+Test
