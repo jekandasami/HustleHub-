@@ -57,11 +57,13 @@ The HustleHub+ backend is built on a MERN stack foundation, utilizing Node.js an
 * Database Boundary: MongoDB serves as the data persistence layer, completely isolated from direct client access to protect confidential user and financial data.
 
 ## Security Implementation & Rationale
-Security is treated as a primary architectural concern rather than an afterthought. The following controls have been implemented:
-*   **Token-Based Authentication (JWT):** Authentication and session management are driven by JSON Web Tokens (JWT) to ensure stateless, secure interactions. Upon successful registration or login, the API generates a JWT containing the user's identification. The JWT Authentication Middleware intercepts subsequent requests and verifies the token's cryptographic signature; if invalid, the API rejects it with a safe 401 Unauthorized response.
-*   **Input Validation:** To mitigate injection attacks and ensure data integrity, strict input validation is enforced at the API's edge. Malicious or missing inputs are immediately rejected. Error responses are highly controlled to ensure they are user-friendly while strictly preventing the exposure of internal system details like stack traces or file paths.
-*   **Password Hashing (Bcrypt):** Plain-text passwords are never retained under any circumstances. Bcrypt is used to hash passwords before storage, ensuring that even if the database is compromised, user credentials remain mathematically irreversible.
-*   **HTTPS Execution:** Enforcing TLS encryption ensures that highly sensitive data—particularly login credentials and active JWTs—cannot be compromised via man-in-the-middle (MITM) attacks over the network.
+
+Security is a primary architectural concern, not an afterthought. The following controls have been implemented:
+
+* Token-Based Authentication (JWT): Authentication and session management are driven by JSON Web Tokens (JWT) to ensure stateless, secure interactions. Upon successful registration or login, the API generates a JWT containing the user’s identification. The JWT Authentication Middleware intercepts subsequent requests and verifies the token’s cryptographic signature; if invalid, the API rejects it with a safe 401 Unauthorized response.
+* Input Validation: To mitigate injection attacks and preserve data integrity, the API applies strict input validation at the edge. Malicious or missing inputs are immediately rejected. Error responses are tightly controlled to remain user-friendly while strictly preventing exposure of internal system details such as stack traces or file paths.
+* Password Hashing (Bcrypt): Plain-text passwords are never retained under any circumstances. Bcrypt hashes passwords before storage, guaranteeing that even if the database is compromised, user credentials remain mathematically irreversible.
+* HTTPS Execution: Enforcing TLS encryption ensures that highly sensitive data, particularly user credentials and active JWTs, cannot be compromised via man-in-the-middle (MITM) attacks over the network.
 
 ## Setup & Run Instructions
 
