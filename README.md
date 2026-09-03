@@ -47,3 +47,5 @@ graph TD
 
 ## Architecture Breakdown
 The HustleHub+ backend is built on a MERN stack foundation, utilizing Node.js and Express to deliver a secure API. The architecture is divided into strict boundaries to enforce a separation of concerns:
+*   **Client Boundary:** The React frontend handles the user interface and securely stores authentication tokens.
+*   **Network Security:** All transit data is encrypted using HTTPS and a local SSL certificate to prevent data interception.
