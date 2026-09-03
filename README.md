@@ -47,12 +47,14 @@ graph TD
     HTTPS --> UI
 ```
 
-## Architecture Breakdown
+Architecture Breakdown
+
 The HustleHub+ backend is built on a MERN stack foundation, utilizing Node.js and Express to deliver a secure API. The architecture is divided into strict boundaries to enforce a separation of concerns:
-*   **Client Boundary:** The React frontend handles the user interface and securely stores authentication tokens.
-*   **Network Security:** All transit data is encrypted using HTTPS and a local SSL certificate to prevent data interception.
-*   **Server Boundary:** The Express API acts as the central gatekeeper. It processes incoming requests through sequential middleware (validation and authentication) before passing them to the business logic controllers.
-*   **Database Boundary:** MongoDB serves as the data persistence layer, completely isolated from direct client access to protect sensitive user and financial data.
+
+* Client Boundary: The React frontend handles the user interface and securely stores authentication tokens.
+* Network Security: All transit data is encrypted using HTTPS and a local SSL certificate to prevent data interception.
+* Server Boundary: The Express API acts as the central gatekeeper. It processes incoming requests through sequential middleware (validation and authentication) before passing them to the business-logic controllers.
+* Database Boundary: MongoDB serves as the data persistence layer, completely isolated from direct client access to protect confidential user and financial data.
 
 ## Security Implementation & Rationale
 Security is treated as a primary architectural concern rather than an afterthought. The following controls have been implemented:
