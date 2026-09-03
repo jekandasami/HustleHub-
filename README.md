@@ -83,3 +83,7 @@ To run this secure API locally, you will need Node.js installed.
 
 **3. Input Validation (Error Handling)**
 ![Invalid Login Response](./evidence/login-invalid.png)
+
+## Demonstration Video
+
+[Click here to view the Part 1 Demonstration Video](VIDEO_LINK_HERE)
