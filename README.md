@@ -1,6 +1,6 @@
-HustleHub+ API
+# HustleHub+ API
 
-System Overview & Intended Users
+## System Overview & Intended Users
 
 HustleHub+ is a secure freelance marketplace platform that connects service providers with clients. The system depends on a secure backend API that processes sensitive transactional and credential data.
 The intended users of this system include:
