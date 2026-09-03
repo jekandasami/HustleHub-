@@ -70,3 +70,10 @@ To run this secure API locally, you will need Node.js installed.
 3. **Environment Variables:** Ensure you have a `.env` file in the root of the `api` directory containing your local port and any necessary secret keys.
 4. **Start the Server:** Run the following command to start the API securely over HTTPS:
    `npm run dev`
+
+## API Testing Evidence
+
+*Note: The following screenshots demonstrate successful API functionality and error handling using Postman.*
+
+**1. User Registration (Success)**
+![Registration Success Response](./evidence/register-success.png)
