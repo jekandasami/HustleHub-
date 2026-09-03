@@ -58,3 +58,12 @@ Security is treated as a primary architectural concern rather than an afterthoug
 *   **Input Validation:** To mitigate injection attacks and ensure data integrity, strict input validation is enforced at the API's edge. Malicious or missing inputs are immediately rejected. Error responses are highly controlled to ensure they are user-friendly while strictly preventing the exposure of internal system details like stack traces or file paths.
 *   **Password Hashing (Bcrypt):** Plain-text passwords are never retained under any circumstances. Bcrypt is used to hash passwords before storage, ensuring that even if the database is compromised, user credentials remain mathematically irreversible.
 *   **HTTPS Execution:** Enforcing TLS encryption ensures that highly sensitive data—particularly login credentials and active JWTs—cannot be compromised via man-in-the-middle (MITM) attacks over the network.
+
+## Setup & Run Instructions
+
+To run this secure API locally, you will need Node.js installed. 
+
+1. **Install Dependencies:** Open your terminal in the `api` folder and run:
+   `npm install`
+2. **Generate Security Certificates:** Create a `certs` folder inside the `api` directory and run OpenSSL to generate your self-signed certificate:
+   `openssl req -nodes -new -x509 -keyout server.key -out server.cert -days 365`
