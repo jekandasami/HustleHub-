@@ -67,3 +67,6 @@ To run this secure API locally, you will need Node.js installed.
    `npm install`
 2. **Generate Security Certificates:** Create a `certs` folder inside the `api` directory and run OpenSSL to generate your self-signed certificate:
    `openssl req -nodes -new -x509 -keyout server.key -out server.cert -days 365`
+3. **Environment Variables:** Ensure you have a `.env` file in the root of the `api` directory containing your local port and any necessary secret keys.
+4. **Start the Server:** Run the following command to start the API securely over HTTPS:
+   `npm run dev`
