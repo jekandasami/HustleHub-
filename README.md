@@ -53,3 +53,6 @@ The HustleHub+ backend is built on a MERN stack foundation, utilizing Node.js an
 *   **Database Boundary:** MongoDB serves as the data persistence layer, completely isolated from direct client access to protect sensitive user and financial data.
 
 ## Security Implementation & Rationale
+Security is treated as a primary architectural concern rather than an afterthought. The following controls have been implemented:
+*   **Token-Based Authentication (JWT):** Authentication and session management are driven by JSON Web Tokens (JWT) to ensure stateless, secure interactions. Upon successful registration or login, the API generates a JWT containing the user's identification. The JWT Authentication Middleware intercepts subsequent requests and verifies the token's cryptographic signature; if invalid, the API rejects it with a safe 401 Unauthorized response.
+*   **Input Validation:** To mitigate injection attacks and ensure data integrity, strict input validation is enforced at the API's edge. Malicious or missing inputs are immediately rejected. Error responses are highly controlled to ensure they are user-friendly while strictly preventing the exposure of internal system details like stack traces or file paths.
