@@ -1,11 +1,13 @@
-# HustleHub+ API
+HustleHub+ API
 
-## System Overview & Intended Users
-HustleHub+ is a secure freelance marketplace platform designed to connect service providers with clients. The system relies on a secure backend API that processes sensitive transactional and credential data. 
+System Overview & Intended Users
+
+HustleHub+ is a secure freelance marketplace platform that connects service providers with clients. The system depends on a secure backend API that processes sensitive transactional and credential data.
 The intended users of this system include:
-*   **Freelancers:** Users who advertise their services, manage gigs, and track their income.
-*   **Clients:** Users who browse available services and book gigs.
-*   **Administrators:** Users responsible for platform oversight (to be implemented in later phases).
+
+* Freelancers: Users who advertise their services, manage gigs, and track their income.
+* Clients: Users who browse available services and book gigs.
+* Administrators: Users responsible for platform oversight (to be implemented in later phases).
 
 ## System Architecture
 
