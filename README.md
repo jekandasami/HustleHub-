@@ -42,3 +42,6 @@ graph TD
     Logic --> API
     API --> HTTPS
     HTTPS --> UI
+
+## Architecture Breakdown
+The HustleHub+ backend is built on a MERN stack foundation, utilizing Node.js and Express to deliver a secure API. The architecture is divided into strict boundaries to enforce a separation of concerns:
