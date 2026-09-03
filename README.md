@@ -51,3 +51,5 @@ The HustleHub+ backend is built on a MERN stack foundation, utilizing Node.js an
 *   **Network Security:** All transit data is encrypted using HTTPS and a local SSL certificate to prevent data interception.
 *   **Server Boundary:** The Express API acts as the central gatekeeper. It processes incoming requests through sequential middleware (validation and authentication) before passing them to the business logic controllers.
 *   **Database Boundary:** MongoDB serves as the data persistence layer, completely isolated from direct client access to protect sensitive user and financial data.
+
+## Security Implementation & Rationale
