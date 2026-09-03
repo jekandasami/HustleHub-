@@ -77,3 +77,9 @@ To run this secure API locally, you will need Node.js installed.
 
 **1. User Registration (Success)**
 ![Registration Success Response](./evidence/register-success.png)
+
+**2. User Login & JWT Generation**
+![Login Success Response](./evidence/login-success.png)
+
+**3. Input Validation (Error Handling)**
+![Invalid Login Response](./evidence/login-invalid.png)
